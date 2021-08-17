@@ -5,7 +5,7 @@ function NavMain() {
         <nav className="nav-main">
             <ul>
                 <li>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/" exact>Home</NavLink>
                 </li>
                 <li>
                     <NavLink to="/about">About</NavLink>
