@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import poster from '../images/godzilla-vs-kong-demo-poster';
+import poster from '../images/godzilla-vs-kong-demo-poster.jpg';
 
 function MovieCard() {
     return (

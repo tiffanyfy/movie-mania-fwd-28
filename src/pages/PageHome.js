@@ -1,7 +1,9 @@
+import Movies from '../components/Movies';
+
 function PageHome() {
     return (
         <section className="home-page">
-            ... this is the home page
+            <Movies />
         </section>
     )
 }

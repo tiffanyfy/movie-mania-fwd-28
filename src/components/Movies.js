@@ -1,8 +1,20 @@
+import MovieCard from './MovieCard';
+
 function Movies() {
     return (
         <div className="movies-container">
-            {/* Movie card component */}
-            ... movies go here
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
         </div>
     )
 }
