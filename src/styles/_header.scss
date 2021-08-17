@@ -12,10 +12,12 @@ header {
     }
 
     @include mq(em($tablet)){
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: em(12);
+        margin: 0 em(12) em(12);
+        padding-top: em(12);
 
         h1 {
             margin: 0;
@@ -26,6 +28,7 @@ header {
     @include mq(em($desktopWide)){
         
         margin: em(20);
+        padding-top: 0;
 
         h1 {
             font-size: em(48);
