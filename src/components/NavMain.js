@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 function NavMain() {
     return (
-        <nav>
+        <nav className="nav-main">
             <ul>
                 <li>
                     <NavLink to="/">Home</NavLink>
@@ -18,4 +18,4 @@ function NavMain() {
     )
 }
 
-export default NavMain
+export default NavMain;
