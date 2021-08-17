@@ -1,9 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import NavSort from '../components/NavSort';
 import Movies from '../components/Movies';
 import { API_TOKEN } from '../globals/globals';
 
 function PageHome({sort}) {
+
+    const [movieData, setMovieData] = useState(null);
 
     useEffect(() => {
 
@@ -22,7 +24,8 @@ function PageHome({sort}) {
             // When we get the response, call the json method and assign to variable
             let rawMovieData = await res.json();
             rawMovieData = rawMovieData.results.splice(0, 12);
-            console.log(rawMovieData);
+            setMovieData(rawMovieData);
+            // console.log(rawMovieData);
 
         }
 
@@ -33,7 +36,7 @@ function PageHome({sort}) {
     return (
         <section className="home-page">
             <NavSort />
-            <Movies />
+            {movieData !== null && <Movies movieData={movieData} />}
         </section>
     )
 }
