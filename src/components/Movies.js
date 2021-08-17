@@ -1,20 +1,9 @@
 import MovieCard from './MovieCard';
 
-function Movies() {
+function Movies({ movieData }) {
     return (
         <div className="movies-container">
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
+            {movieData.map((oneMovie, i) => <MovieCard key={i} movieObj={oneMovie} />)}
         </div>
     )
 }
