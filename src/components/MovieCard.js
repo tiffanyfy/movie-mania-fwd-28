@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
-import poster from '../images/godzilla-vs-kong-demo-poster.jpg';
+import noPoster from '../images/no-movie-poster.jpg';
 
-function MovieCard() {
+function MovieCard({ movieObj }) {
     return (
         <div className="movie-card">
             <div className="movie-poster">
-                <img src={poster} alt="Godzille vs. Kong" />
+                {movieObj.poster_path === null ?
+                    <img src={noPoster} alt="No poster" /> :
+                    <img src={`https://image.tmdb.org/t/p/w500/${movieObj.poster_path}`} alt={movieObj.title} />
+                }
             </div>
             <div className="movie">
-                <h3>Godzilla Vs. Kong</h3>
-                <Link to="/">More Info</Link>
+                <h3>{movieObj.title}</h3>
+                <Link to={`/movie/${movieObj.id}`}>More Info</Link>
             </div>
         </div>
     )
