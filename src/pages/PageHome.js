@@ -23,6 +23,7 @@ function PageHome({sort}) {
 
             // When we get the response, call the json method and assign to variable
             let rawMovieData = await res.json();
+            // reduce from 20 to 12
             rawMovieData = rawMovieData.results.splice(0, 12);
             setMovieData(rawMovieData);
             // console.log(rawMovieData);
