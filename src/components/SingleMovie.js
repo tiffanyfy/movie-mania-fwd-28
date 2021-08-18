@@ -1,3 +1,6 @@
+// pass in the movie object, which we've captured using the id
+// rendered the backdrop
+
 import poster from '../images/godzilla-vs-kong-demo-poster.jpg';
 import noPoster from '../images/no-movie-poster.jpg';
 

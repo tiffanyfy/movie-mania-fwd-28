@@ -1,3 +1,6 @@
+// Render all the movies
+// Pass the movie data into the movies
+
 import { useEffect, useState } from 'react';
 import NavSort from '../components/NavSort';
 import Movies from '../components/Movies';

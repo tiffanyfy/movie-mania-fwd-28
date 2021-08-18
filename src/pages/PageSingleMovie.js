@@ -1,3 +1,10 @@
+// how we capture the data -> if you have a url parameter, use react router hook useParams
+// call the useParams function, comes back as an object
+// capture the id
+// get/fetch the movie and pass in the id
+// url calls the movie
+// get the movie back then send it down to SingleMovie
+
 import { useEffect, useState } from 'react'; 
 import { useParams } from 'react-router-dom';
 import SingleMovie from '../components/SingleMovie';
@@ -8,10 +15,6 @@ function PageSingleMovie() {
     const [movieData, setMovieData] = useState(null);
 
     const { id } = useParams();
-
-    // console.log(id);
-
-    // https://api.themoviedb.org/3/movie/12345?api_key=<<api_key>>&language=en-US
 
     useEffect(() => {
 
