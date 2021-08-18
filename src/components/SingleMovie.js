@@ -1,17 +1,26 @@
 import poster from '../images/godzilla-vs-kong-demo-poster.jpg';
-//import noPoster from '../images/no-movie-poster.jpg';
+import noPoster from '../images/no-movie-poster.jpg';
 
-function SingleMovie() {
+function SingleMovie({ movieObj }) {
+
+    // https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
+
     return (
         <div className="single-movie">
-            <div className="single-movie-backdrop"></div>
+            <div className="single-movie-backdrop"
+            style={{
+                backgroundImage: movieObj.backdrop_path && `url(https://image.tmdb.org/t/p/original/${movieObj.backdrop_path})`
+            }}></div>
             <div className="single-movie-content">
                 <div className="single-movie-poster">
-                    <img src={poster} alt="Add alt here..." />
+                {movieObj.poster_path === null ?
+                    <img src={noPoster} alt="No poster" /> :
+                    <img src={`https://image.tmdb.org/t/p/w500/${movieObj.poster_path}`} alt={movieObj.title} />
+                }
                 </div>
                 <div className="single-movie-info">
-                    <h2>Title</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad reiciendis, dolores quasi iure repellat sed magnam soluta sint ipsa, quos cumque eum eaque ducimus hic labore nemo modi quod deleniti.</p>
+                    <h2>{movieObj.title}</h2>
+                    <p>{movieObj.overview}</p>
                 </div>
             </div>
         </div>
